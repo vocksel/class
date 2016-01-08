@@ -1,6 +1,6 @@
 # Lua Classes
 
-This is a simple library that makes creating table-based classes simple.
+This is a simple module that makes creating table-based classes simple.
 
 This was designed for use with [ROBLOX](https://roblox.com), and as such follows
 their commonly used OOP conventions. But it works just fine in any Lua project.

@@ -1,4 +1,4 @@
-# Lua Classes
+# class.lua
 
 This is a simple module that makes creating table-based classes simple.
 

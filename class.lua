@@ -21,7 +21,7 @@ function class(name, super)
   local Class = getNewClass(name)
 
   if super then
-    subclass(class, super)
+    subclass(Class, super)
   end
 
   -- This follows ROBLOX's convention of instantiating classes with `.new()`.

@@ -39,13 +39,19 @@ as the second argument.
 The only part you really have to remember is to call the `__init` method of the
 super class, otherwise you won't inherit the super's properties.
 
+Each subclass also has the property `Super`, which holds a reference to the
+class it inherits from. That way you only have to reference the parent class by
+name one time when you pass it into `class()`.
+
 ```lua
 -- This example continues from the one above
 
 local Guy = class("Guy", Person)
 
 function Guy:__init(name, age, manliness)
-  Person.__init(self, name, age)
+  -- This calls Person.__init on this instance, and sets the Name and Age
+  -- properties for you.
+  self.Super.__init(self, name, age)
 
   self.Manliness = manliness
 end

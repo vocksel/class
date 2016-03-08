@@ -11,10 +11,8 @@ The `__init` method defines the parameters your class takes. To instantiate, you
 call the `new` function. This is the convention ROBLOX's built-in classes
 follow.
 
-If you're using this outside of ROBLOX, you'll simply require it with
-`require("class")`.
-
 ```lua
+-- If you're using this outside of ROBLOX, you simply need `require("class")`
 local class = require(game.ReplicatedStorage.Class)
 
 local Person = class("Person")
@@ -38,9 +36,9 @@ Inheriting a class is also very easy. The only part you really have to remember
 is to call the `__init` method of the super class, otherwise you won't inherit
 the super's properties.
 
-This continues from the above example:
-
 ```lua
+-- This example continues from the one above
+
 local Guy = class("Guy", Person)
 
 function Guy:__init(name, age, manliness)
@@ -68,9 +66,9 @@ This is what those classes look like in plain Lua. They're a lot longer and
 you're constantly dealing with metatables. This module hides all of that
 nonsense from view so you can focus on what's important: writing code.
 
-Instantiation is still the same as above.
-
 ```lua
+-- Instantiation with .new() is still the same as above.
+
 local Person = {}
 Person.__index = Person
 Person.ClassName = "Person"

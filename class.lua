@@ -22,6 +22,7 @@ local function getNewClass(className)
 end
 
 local function subclass(NewClass, SuperClass)
+  NewClass.Super = SuperClass
   setmetatable(NewClass, SuperClass)
   copyMetaMethods(SuperClass, NewClass)
 end

@@ -13,17 +13,17 @@ local function copyMetaMethods(from, to)
   end
 end
 
-local function getNewClass(name)
-  local Object = {}
-  Object.__index = Object
-  Object.ClassName = name
+local function getNewClass(className)
+  local NewClass = {}
+  NewClass.__index = NewClass
+  NewClass.ClassName = className
 
-  return Object
+  return NewClass
 end
 
-local function subclass(class, super)
-  setmetatable(class, super)
-  copyMetaMethods(super, class)
+local function subclass(NewClass, SuperClass)
+  setmetatable(NewClass, SuperClass)
+  copyMetaMethods(SuperClass, NewClass)
 end
 
 local function initializeObject(object, ...)
@@ -32,21 +32,21 @@ local function initializeObject(object, ...)
   end
 end
 
-function class(name, super)
-  local Class = getNewClass(name)
+function class(className, SuperClass)
+  local NewClass = getNewClass(className)
 
-  if super then
-    subclass(Class, super)
+  if SuperClass then
+    subclass(NewClass, SuperClass)
   end
 
   -- This follows ROBLOX's convention of instantiating classes with `.new()`.
-  function Class.new(...)
-    local self = setmetatable({}, Class)
+  function NewClass.new(...)
+    local self = setmetatable({}, NewClass)
     initializeObject(self, ...)
     return self
   end
 
-  return Class
+  return NewClass
 end
 
 return class

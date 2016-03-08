@@ -27,9 +27,7 @@ local function subclass(NewClass, SuperClass)
 end
 
 local function initializeObject(object, ...)
-  if object.__init then
-    object:__init(...)
-  end
+  if object.__init then object:__init(...) end
 end
 
 function class(className, SuperClass)

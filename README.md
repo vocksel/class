@@ -7,9 +7,10 @@ their commonly used OOP conventions. But it works just fine in any Lua project.
 
 ## Usage
 
-The `__init` method defines the parameters your class takes. To instantiate, you
-call the `new` function. This is the convention ROBLOX's built-in classes
-follow.
+The `__init` method defines the parameters your class takes.
+
+To instantiate, you call the `new` function. This is the convention ROBLOX's
+built-in classes follow.
 
 ```lua
 -- If you're using this outside of ROBLOX, you simply need `require("class")`
@@ -32,9 +33,11 @@ person:Greet() -- "Hi, my names John Smith and I'm 24 years old."
 
 ## Inheritance
 
-Inheriting a class is also very easy. The only part you really have to remember
-is to call the `__init` method of the super class, otherwise you won't inherit
-the super's properties.
+To make a class inherit another, you pass in the class you want to be inherited
+as the second argument.
+
+The only part you really have to remember is to call the `__init` method of the
+super class, otherwise you won't inherit the super's properties.
 
 ```lua
 -- This example continues from the one above

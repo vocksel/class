@@ -30,6 +30,8 @@ local function initializeObject(object, ...)
   if object.__init then object:__init(...) end
 end
 
+--------------------------------------------------------------------------------
+
 function class(className, SuperClass)
   local NewClass = getNewClass(className)
 

@@ -22,12 +22,17 @@ local function getNewClass(className)
 end
 
 local function subclass(NewClass, SuperClass)
+  -- The superclass is set as a property so subclasses can easily reference it
+  -- without having to use the actual name of the superclass.
   NewClass.Super = SuperClass
+
   setmetatable(NewClass, SuperClass)
   copyMetaMethods(SuperClass, NewClass)
 end
 
 local function initializeObject(object, ...)
+  -- The __init method is not expected to be defined for every class, so we need
+  -- to make sure things won't break if it's not.
   if object.__init then object:__init(...) end
 end
 

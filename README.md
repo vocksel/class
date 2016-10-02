@@ -1,9 +1,9 @@
 # class.lua
 
-This is a simple module that makes creating table-based classes simple.
+A super simple module for defining Lua classes.
 
 This was designed for use with [ROBLOX](https://roblox.com), and as such follows
-their commonly used OOP conventions. But it works just fine in any Lua project.
+their commonly used OOP conventions, but it works just fine in any Lua project.
 
 ## Usage
 
@@ -16,6 +16,8 @@ built-in classes follow.
 -- If you're using this outside of ROBLOX, you simply need `require("class")`
 local class = require(game.ReplicatedStorage.Class)
 
+-- The string is assigned to the `ClassName` property, again following
+-- ROBLOX's conventions.
 local Person = class("Person")
 
 function Person:__init(name, age)
@@ -37,7 +39,7 @@ To make a class inherit another, you pass in the class you want to be inherited
 as the second argument.
 
 The only part you really have to remember is to call the `__init` method of the
-super class, otherwise you won't inherit the super's properties.
+superclass, otherwise you won't inherit the super's properties.
 
 The superclass is also returned after the newly created class so that you can
 create a reference to it. This saves you the trouble of using a direct reference
@@ -69,6 +71,10 @@ local guy = Guy.new("John Smith", 24, math.huge)
 guy:Greet() -- "Hi, my names John Smith and I'm 24 years old."
 guy:AttackABearOrWhateverGuysDo() -- "I could totally fight that bear."
 ```
+
+It's also handy to know: if your subclass does not change anything about the
+parameters it takes, you don't need to create an `__init` method. Lua will
+automatically use the `__init` of the superclass.
 
 ## Equivalent
 

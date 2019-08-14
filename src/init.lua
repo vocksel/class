@@ -38,6 +38,8 @@ local function getNewClass(className)
 end
 
 local function class(className, SuperClass)
+	assert(type(className) == "string", "First argument to class() must be a string for the ClassName")
+
 	local NewClass = getNewClass(className)
 
 	if SuperClass then

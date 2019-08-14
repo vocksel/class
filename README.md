@@ -2,22 +2,22 @@
 
 A super simple module for defining Lua classes.
 
-This was designed for use with [ROBLOX](https://roblox.com), and as such follows
+This was designed for use with [Roblox](https://roblox.com), and as such follows
 their commonly used OOP conventions, but it works just fine in any Lua project.
 
 ## Usage
 
 The `__init` method defines the parameters your class takes.
 
-To instantiate, you call the `new` function. This is the convention ROBLOX's
+To instantiate, you call the `new` function. This is the convention Roblox's
 built-in classes follow.
 
 ```lua
--- If you're using this outside of ROBLOX, you simply need `require("class")`
+-- If you're using this outside of Roblox, you simply need `require("class")`
 local class = require(game.ReplicatedStorage.Class)
 
 -- The string is assigned to the `ClassName` property, again following
--- ROBLOX's conventions.
+-- Roblox's conventions.
 local Person = class("Person")
 
 function Person:__init(name, age)

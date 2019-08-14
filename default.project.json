@@ -11,7 +11,7 @@
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
       "TestEz": {
-        "$path": "modules/testez"
+        "$path": "modules/testez/lib"
       },
       "Class": {
         "$path": "src"

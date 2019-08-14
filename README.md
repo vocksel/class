@@ -1,4 +1,4 @@
-# class.lua
+# class()
 
 A super simple module for defining Lua classes.
 

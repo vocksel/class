@@ -14,7 +14,7 @@
         "$path": "modules/testez"
       },
       "class": {
-        "$path": "class.lua"
+        "$path": "src"
       }
     }
   }

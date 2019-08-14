@@ -78,6 +78,27 @@ return function()
 			expect(Sub).to.never.equal(Base)
 		end)
 
+		it("should allow two classes to define the properties they take", function()
+			local Base = class("Base")
+
+			function Base:__init(foo)
+				self.foo = foo
+			end
+
+			local Sub, super = class("Sub", Base)
+
+			function Sub:__init(foo, bar)
+				super.__init(self, foo)
+
+				self.bar = bar
+			end
+
+			local instance = Sub.new("foo", "bar")
+
+			expect(instance.foo).to.equal("foo")
+			expect(instance.bar).to.equal("bar")
+		end)
+
 		it("should look up methods in the superclass", function()
 			local Base = class("Base")
 

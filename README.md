@@ -7,16 +7,12 @@ their commonly used OOP conventions, but it works just fine in any Lua project.
 
 ## Usage
 
-The `__init` method defines the parameters your class takes.
-
-To instantiate, you call the `new` function. This is the convention Roblox's
-built-in classes follow.
-
 ```lua
 local class = require(game.ReplicatedStorage.Class)
 
 local Person = class("Person")
 
+-- This method defines the parameters your class takes
 function Person:__init(name, age)
 	self.Name = name
 	self.Age = age
@@ -26,6 +22,7 @@ function Person:Greet()
 	print("Hi, my names " .. self.Name .. " and I'm " .. self.Age .. " years old.")
 end
 
+-- To instantiate, you call the `new` function
 local person = Person.new("John", 18)
 
 person:Greet() -- "Hi, my names John and I'm 18 years old."

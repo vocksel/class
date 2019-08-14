@@ -18,21 +18,19 @@ local function subclass(NewClass, SuperClass)
 	copyMetaMethods(SuperClass, NewClass)
 end
 
-local function initializeObject(object, ...)
-	-- The __init method is not expected to be defined for every class, so we need
-	-- to make sure things won't break if it's not.
-	if object.__init then object:__init(...) end
-end
-
 local function getNewClass(className)
 	local NewClass = {}
 	NewClass.__index = NewClass
 	NewClass.ClassName = className
 
-	-- This follows ROBLOX's convention of instantiating classes with `.new()`.
 	function NewClass.new(...)
-		local self = setmetatable({}, NewClass)
-		initializeObject(self, ...)
+		local self = {}
+		setmetatable(self, NewClass)
+
+		if self.__init then
+			self:__init(...)
+		end
+
 		return self
 	end
 

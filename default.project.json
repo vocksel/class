@@ -1,0 +1,21 @@
+{
+  "name": "class.lua",
+  "tree": {
+    "$className": "DataModel",
+    "HttpService": {
+      "$className": "HttpService",
+      "$properties": {
+        "HttpEnabled": true
+      }
+    },
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "TestEz": {
+        "$path": "modules/testez"
+      },
+      "class": {
+        "$path": "class.lua"
+      }
+    }
+  }
+}

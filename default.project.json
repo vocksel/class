@@ -13,9 +13,15 @@
       "TestEz": {
         "$path": "modules/testez"
       },
-      "class": {
+      "Class": {
         "$path": "src"
       }
-    }
+	},
+	"ServerScriptService": {
+		"$className": "ServerScriptService",
+		"RunTests": {
+			"$path": "run-tests.server.lua"
+		}
+	}
   }
 }

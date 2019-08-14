@@ -37,9 +37,7 @@ local function getNewClass(className)
 	return NewClass
 end
 
---------------------------------------------------------------------------------
-
-function class(className, SuperClass)
+local function class(className, SuperClass)
 	local NewClass = getNewClass(className)
 
 	if SuperClass then

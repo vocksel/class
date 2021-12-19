@@ -1,5 +1,5 @@
 [package]
-name = "vocksel/mock"
+name = "vocksel/class"
 version = "0.1.0"
 authors = [ "David Minnerly <me@vocksel.com>" ]
 license = "MIT"

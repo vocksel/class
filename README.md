@@ -75,15 +75,7 @@ use the `__init` of the superclass.
 
 ## Contributing
 
-Install [Rojo](https://github.com/rojo-rbx/rojo/) and then run the following commands:
+See the [contributing guide](CONTRIBUTING.md).
+## License
 
-```sh
-$ rojo build -o place.rbxlx
-$ rojo serve
-```
-
-Open the newly generated place file and start the Rojo plugin.
-
-From here you can modify anything under `src/` and your changes will be synced in.
-
-When you're ready to test, simply press F5 to play the game.
+[MIT License](LICENSE)

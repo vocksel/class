@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
   pull_request:
+    paths-ignore:
+      - '**.md'
   schedule:
     # Every day at 8pm UTC (12am PST)
     - cron: "0 20 * * *"

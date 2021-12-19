@@ -1,5 +1,6 @@
 [package]
 name = "vocksel/class"
+description = "A super simple approach to making classes in Roblox"
 version = "0.1.0"
 authors = [ "David Minnerly <me@vocksel.com>" ]
 license = "MIT"

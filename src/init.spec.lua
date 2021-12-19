@@ -167,9 +167,5 @@ return function()
 			expect(tostring(instance)).to.equal("Sub")
 			expect(instance()).to.equal(1)
 		end)
-
-		it("should be able to define its own __init and use the superclass' at the same time", function()
-			local Person = class("Foo")
-		end)
 	end)
 end

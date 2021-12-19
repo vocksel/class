@@ -1,8 +1,17 @@
-
 -- This is the list of metamethods that are copied from one class to another.
 local INHERITED_METAMETHODS = {
-	"__add", "__call", "__concat", "__div", "__le", "__lt", "__mod", "__mul",
-	"__pow", "__sub", "__tostring", "__unm"
+	"__add",
+	"__call",
+	"__concat",
+	"__div",
+	"__le",
+	"__lt",
+	"__mod",
+	"__mul",
+	"__pow",
+	"__sub",
+	"__tostring",
+	"__unm",
 }
 
 -- Copies the metamethods from one class to another.

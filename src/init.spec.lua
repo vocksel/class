@@ -1,7 +1,7 @@
 return function()
 	local class = require(script.Parent)
 
-    it("should create a unique new table", function()
+	it("should create a unique new table", function()
 		local Class = class("Class")
 
 		expect(Class).to.be.a("table")
@@ -57,7 +57,6 @@ return function()
 		local Class = class("Class")
 		expect(Class.ClassName).to.equal("Class")
 	end)
-
 
 	it("should reuse the metatable for each instance of a class", function()
 		local Class = class("Class")

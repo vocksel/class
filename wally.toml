@@ -1,0 +1,13 @@
+[package]
+name = "vocksel/mock"
+version = "0.1.0"
+authors = [ "David Minnerly <me@vocksel.com>" ]
+license = "MIT"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = [
+    "*.spec.lua"
+]
+
+[dev-dependencies]
+TestEZ = "roblox/testez@0.4.1"

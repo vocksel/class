@@ -1,33 +1,6 @@
 {
-  "name": "class.lua",
-  "tree": {
-    "$className": "DataModel",
-    "HttpService": {
-      "$className": "HttpService",
-      "$properties": {
-        "HttpEnabled": true
-      }
-	},
-	"Players": {
-		"$className": "Players",
-		"$properties": {
-			"CharacterAutoLoads": false
-		}
-	},
-    "ReplicatedStorage": {
-      "$className": "ReplicatedStorage",
-      "TestEz": {
-        "$path": "modules/testez/lib"
-      },
-      "Class": {
+    "name": "class",
+    "tree": {
         "$path": "src"
-      }
-	},
-	"ServerScriptService": {
-		"$className": "ServerScriptService",
-		"RunTests": {
-			"$path": "run-tests.server.lua"
-		}
-	}
-  }
+    }
 }

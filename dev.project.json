@@ -3,11 +3,11 @@
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
-      "DevPackages": {
-        "$path": "DevPackages"
-      },
-      "class": {
-        "$path": "src"
+      "Packages": {
+        "$path": "Packages",
+        "class": {
+          "$path": "src"
+        }
       }
     },
     "ServerScriptService": {

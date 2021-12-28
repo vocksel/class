@@ -1,9 +1,9 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local TestEZ = require(ReplicatedStorage.DevPackages.TestEZ)
+local TestEZ = require(ReplicatedStorage.Packages.TestEZ)
 
 local results = TestEZ.TestBootstrap:run({
-	ReplicatedStorage,
+	ReplicatedStorage.Packages,
 })
 
 if results.failureCount > 0 then

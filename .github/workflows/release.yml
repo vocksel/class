@@ -5,7 +5,7 @@ on:
     types: [published]
 
 env:
-  OUTPUT_NAME: "Mock.rbxm"
+  OUTPUT_NAME: "class.rbxm"
 
 jobs:
   publish:

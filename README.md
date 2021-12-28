@@ -8,7 +8,7 @@ their commonly used OOP conventions, but it works just fine in any Lua project.
 ## Usage
 
 ```lua
-local class = require(game.ReplicatedStorage.Class)
+local class = require(ReplicatedStorage.Packages.Class)
 
 local Person = class("Person")
 
@@ -27,6 +27,26 @@ local person = Person.new("John", 18)
 
 person:Greet() -- "Hi, my names John and I'm 18 years old."
 ```
+
+## Installation
+
+Installing the package is quick and easy whether you use a package manager like [Wally](https://github.com/UpliftGames/wally) or work directly in Studio.
+
+### Wally (Recommended)
+
+Add the following to your `wally.toml` and run `wally install` to download the package.
+
+```toml
+[dependencies]
+class = "vocksel/class@0.1.1"
+```
+
+Make sure the resulting `Packages` folder is synced into your experience using a tool like [Rojo](https://github.com/rojo-rbx/rojo/).
+
+### Roblox Studio
+
+* Download a copy of the rbxm from the [releases page](https://github.com/vocksel/class/releases/latest) under the Assets section.
+* Drag and drop the file into Roblox Studio to add it to your experience.
 
 ## Inheritance
 
